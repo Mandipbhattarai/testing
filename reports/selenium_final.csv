@@ -1,19 +1,19 @@
 timestamp,test_name,payload,outcome,notes,url
-2025-09-02T04:42:00.066733,login_flow,,FAIL,"Message: 
+2025-09-02T04:49:59.170222,login_flow,,FAIL,"Message: 
 ",http://localhost:3000/login
-2025-09-02T04:42:21.503689,register_login_flow,,FAIL,"Message: 
+2025-09-02T04:50:20.244056,register_login_flow,,FAIL,"Message: 
 ",http://localhost:3000/register
-2025-09-02T04:42:33.446829,sqli_login,' OR '1'='1,PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:42:35.291344,sqli_login,""" OR ""1""=""1"" --",PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:42:36.878568,sqli_login,' OR 1=1 --,PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:42:38.792971,sqli_login,') OR ('1'='1,PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:42:40.369567,sqli_login,admin' --,PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:42:42.139398,sqli_login,admin' OR '1'='1,PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:42:43.716085,sqli_login,"' UNION SELECT NULL,NULL --",PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:42:45.306052,sqli_login,; DROP TABLE users; --,PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:42:57.274442,xss_login_error,<script>alert('XSS')</script>,PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:42:58.696895,xss_login_error,"""><img src=x onerror=alert(1)>",PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:43:00.116398,xss_login_error,<svg onload=alert(1)>,PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:43:01.514058,xss_login_error,<body onload=alert(1)>,PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:43:02.937626,xss_login_error,"<a href=""javascript:alert(1)"">x</a>",PASS,Blocked as expected,http://localhost:3000/login
-2025-09-02T04:43:04.338864,xss_login_error,<div onclick=alert(1)>click</div>,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:32.856888,sqli_login,' OR '1'='1,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:35.017325,sqli_login,""" OR ""1""=""1"" --",PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:36.716246,sqli_login,' OR 1=1 --,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:38.334950,sqli_login,') OR ('1'='1,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:39.967760,sqli_login,admin' --,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:41.812263,sqli_login,admin' OR '1'='1,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:43.392581,sqli_login,"' UNION SELECT NULL,NULL --",PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:45.075797,sqli_login,; DROP TABLE users; --,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:56.463000,xss_login_error,<script>alert('XSS')</script>,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:58.106361,xss_login_error,"""><img src=x onerror=alert(1)>",PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:50:59.697077,xss_login_error,<svg onload=alert(1)>,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:51:01.314093,xss_login_error,<body onload=alert(1)>,PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:51:02.705281,xss_login_error,"<a href=""javascript:alert(1)"">x</a>",PASS,Blocked as expected,http://localhost:3000/login
+2025-09-02T04:51:04.089135,xss_login_error,<div onclick=alert(1)>click</div>,PASS,Blocked as expected,http://localhost:3000/login

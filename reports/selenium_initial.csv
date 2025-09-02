@@ -1,19 +1,19 @@
 timestamp,test_name,payload,outcome,notes,url
-2025-09-02T04:34:14.093143,login_flow,,FAIL,"Message: 
+2025-09-02T04:47:16.801141,login_flow,,FAIL,"Message: 
 ",http://localhost:3000/login
-2025-09-02T04:34:35.047487,register_login_flow,,FAIL,"Message: 
+2025-09-02T04:47:37.709650,register_login_flow,,FAIL,"Message: 
 ",http://localhost:3000/register
-2025-09-02T04:34:46.215043,sqli_login,' OR '1'='1,PASS,No redirect occurred,http://localhost:3000/login
-2025-09-02T04:34:47.774992,sqli_login,""" OR ""1""=""1"" --",PASS,No redirect occurred,http://localhost:3000/login
-2025-09-02T04:34:49.340366,sqli_login,' OR 1=1 --,FAIL,Vulnerability FOUND: login bypass,http://localhost:3000/admin-login
-2025-09-02T04:34:50.980926,sqli_login,') OR ('1'='1,PASS,No redirect occurred,http://localhost:3000/login
-2025-09-02T04:34:52.546435,sqli_login,admin' --,PASS,No redirect occurred,http://localhost:3000/login
-2025-09-02T04:34:54.089574,sqli_login,admin' OR '1'='1,PASS,No redirect occurred,http://localhost:3000/login
-2025-09-02T04:34:55.627491,sqli_login,"' UNION SELECT NULL,NULL --",PASS,No redirect occurred,http://localhost:3000/login
-2025-09-02T04:34:57.211730,sqli_login,; DROP TABLE users; --,PASS,No redirect occurred,http://localhost:3000/login
-2025-09-02T04:35:08.424508,xss_login_error,<script>alert('XSS')</script>,PASS,No alert present,http://localhost:3000/login
-2025-09-02T04:35:09.838759,xss_login_error,"""><img src=x onerror=alert(1)>",FAIL,XSS Executed: 1,http://localhost:3000/login
-2025-09-02T04:35:11.890094,xss_login_error,<svg onload=alert(1)>,PASS,No alert present,http://localhost:3000/login
-2025-09-02T04:35:13.365604,xss_login_error,<body onload=alert(1)>,PASS,No alert present,http://localhost:3000/login
-2025-09-02T04:35:14.771302,xss_login_error,"<a href=""javascript:alert(1)"">x</a>",PASS,No alert present,http://localhost:3000/login
-2025-09-02T04:35:16.152157,xss_login_error,<div onclick=alert(1)>click</div>,PASS,No alert present,http://localhost:3000/login
+2025-09-02T04:47:50.178935,sqli_login,' OR '1'='1,PASS,No redirect occurred,http://localhost:3000/login
+2025-09-02T04:47:51.728242,sqli_login,""" OR ""1""=""1"" --",PASS,No redirect occurred,http://localhost:3000/login
+2025-09-02T04:47:53.250042,sqli_login,' OR 1=1 --,FAIL,Vulnerability FOUND: login bypass,http://localhost:3000/admin-login
+2025-09-02T04:47:54.906411,sqli_login,') OR ('1'='1,PASS,No redirect occurred,http://localhost:3000/login
+2025-09-02T04:47:56.473069,sqli_login,admin' --,PASS,No redirect occurred,http://localhost:3000/login
+2025-09-02T04:47:58.023356,sqli_login,admin' OR '1'='1,PASS,No redirect occurred,http://localhost:3000/login
+2025-09-02T04:47:59.552842,sqli_login,"' UNION SELECT NULL,NULL --",PASS,No redirect occurred,http://localhost:3000/login
+2025-09-02T04:48:01.093076,sqli_login,; DROP TABLE users; --,PASS,No redirect occurred,http://localhost:3000/login
+2025-09-02T04:48:12.266428,xss_login_error,<script>alert('XSS')</script>,PASS,No alert present,http://localhost:3000/login
+2025-09-02T04:48:13.651176,xss_login_error,"""><img src=x onerror=alert(1)>",FAIL,XSS Executed: 1,http://localhost:3000/login
+2025-09-02T04:48:15.240548,xss_login_error,<svg onload=alert(1)>,PASS,No alert present,http://localhost:3000/login
+2025-09-02T04:48:16.647690,xss_login_error,<body onload=alert(1)>,PASS,No alert present,http://localhost:3000/login
+2025-09-02T04:48:18.039634,xss_login_error,"<a href=""javascript:alert(1)"">x</a>",PASS,No alert present,http://localhost:3000/login
+2025-09-02T04:48:19.484374,xss_login_error,<div onclick=alert(1)>click</div>,PASS,No alert present,http://localhost:3000/login

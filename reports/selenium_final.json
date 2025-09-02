@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2025-09-02T04:42:00.066733",
+    "timestamp": "2025-09-02T04:49:59.170222",
     "test_name": "login_flow",
     "payload": "",
     "outcome": "FAIL",
@@ -8,7 +8,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:21.503689",
+    "timestamp": "2025-09-02T04:50:20.244056",
     "test_name": "register_login_flow",
     "payload": "",
     "outcome": "FAIL",
@@ -16,7 +16,7 @@
     "url": "http://localhost:3000/register"
   },
   {
-    "timestamp": "2025-09-02T04:42:33.446829",
+    "timestamp": "2025-09-02T04:50:32.856888",
     "test_name": "sqli_login",
     "payload": "' OR '1'='1",
     "outcome": "PASS",
@@ -24,7 +24,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:35.291344",
+    "timestamp": "2025-09-02T04:50:35.017325",
     "test_name": "sqli_login",
     "payload": "\" OR \"1\"=\"1\" --",
     "outcome": "PASS",
@@ -32,7 +32,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:36.878568",
+    "timestamp": "2025-09-02T04:50:36.716246",
     "test_name": "sqli_login",
     "payload": "' OR 1=1 --",
     "outcome": "PASS",
@@ -40,7 +40,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:38.792971",
+    "timestamp": "2025-09-02T04:50:38.334950",
     "test_name": "sqli_login",
     "payload": "') OR ('1'='1",
     "outcome": "PASS",
@@ -48,7 +48,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:40.369567",
+    "timestamp": "2025-09-02T04:50:39.967760",
     "test_name": "sqli_login",
     "payload": "admin' --",
     "outcome": "PASS",
@@ -56,7 +56,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:42.139398",
+    "timestamp": "2025-09-02T04:50:41.812263",
     "test_name": "sqli_login",
     "payload": "admin' OR '1'='1",
     "outcome": "PASS",
@@ -64,7 +64,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:43.716085",
+    "timestamp": "2025-09-02T04:50:43.392581",
     "test_name": "sqli_login",
     "payload": "' UNION SELECT NULL,NULL --",
     "outcome": "PASS",
@@ -72,7 +72,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:45.306052",
+    "timestamp": "2025-09-02T04:50:45.075797",
     "test_name": "sqli_login",
     "payload": "; DROP TABLE users; --",
     "outcome": "PASS",
@@ -80,7 +80,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:57.274442",
+    "timestamp": "2025-09-02T04:50:56.463000",
     "test_name": "xss_login_error",
     "payload": "<script>alert('XSS')</script>",
     "outcome": "PASS",
@@ -88,7 +88,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:42:58.696895",
+    "timestamp": "2025-09-02T04:50:58.106361",
     "test_name": "xss_login_error",
     "payload": "\"><img src=x onerror=alert(1)>",
     "outcome": "PASS",
@@ -96,7 +96,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:43:00.116398",
+    "timestamp": "2025-09-02T04:50:59.697077",
     "test_name": "xss_login_error",
     "payload": "<svg onload=alert(1)>",
     "outcome": "PASS",
@@ -104,7 +104,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:43:01.514058",
+    "timestamp": "2025-09-02T04:51:01.314093",
     "test_name": "xss_login_error",
     "payload": "<body onload=alert(1)>",
     "outcome": "PASS",
@@ -112,7 +112,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:43:02.937626",
+    "timestamp": "2025-09-02T04:51:02.705281",
     "test_name": "xss_login_error",
     "payload": "<a href=\"javascript:alert(1)\">x</a>",
     "outcome": "PASS",
@@ -120,7 +120,7 @@
     "url": "http://localhost:3000/login"
   },
   {
-    "timestamp": "2025-09-02T04:43:04.338864",
+    "timestamp": "2025-09-02T04:51:04.089135",
     "test_name": "xss_login_error",
     "payload": "<div onclick=alert(1)>click</div>",
     "outcome": "PASS",
