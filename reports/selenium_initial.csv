@@ -1,8 +1,4 @@
 timestamp,test_name,payload,outcome,notes,url
-2025-09-02T04:47:16.801141,login_flow,,FAIL,"Message: 
-",http://localhost:3000/login
-2025-09-02T04:47:37.709650,register_login_flow,,FAIL,"Message: 
-",http://localhost:3000/register
 2025-09-02T04:47:50.178935,sqli_login,' OR '1'='1,PASS,No redirect occurred,http://localhost:3000/login
 2025-09-02T04:47:51.728242,sqli_login,""" OR ""1""=""1"" --",PASS,No redirect occurred,http://localhost:3000/login
 2025-09-02T04:47:53.250042,sqli_login,' OR 1=1 --,FAIL,Vulnerability FOUND: login bypass,http://localhost:3000/admin-login
