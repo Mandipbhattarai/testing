@@ -1,8 +1,4 @@
 timestamp,test_name,payload,outcome,notes,url
-2025-09-02T04:49:59.170222,login_flow,,FAIL,"Message: 
-",http://localhost:3000/login
-2025-09-02T04:50:20.244056,register_login_flow,,FAIL,"Message: 
-",http://localhost:3000/register
 2025-09-02T04:50:32.856888,sqli_login,' OR '1'='1,PASS,Blocked as expected,http://localhost:3000/login
 2025-09-02T04:50:35.017325,sqli_login,""" OR ""1""=""1"" --",PASS,Blocked as expected,http://localhost:3000/login
 2025-09-02T04:50:36.716246,sqli_login,' OR 1=1 --,PASS,Blocked as expected,http://localhost:3000/login
