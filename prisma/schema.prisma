@@ -1,0 +1,22 @@
+// This schema is provided only for types/documentation.
+// Actual data access uses better-sqlite3 with raw queries.
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./data/ems.db"
+}
+
+model User {
+  id           Int     @id @default(autoincrement())
+  email        String  @unique
+  passwordHash String
+  role         String  // 'admin' | 'user'
+}
+
+model Event {
+  id          Int     @id @default(autoincrement())
+  title       String
+  date        String
+  location    String
+  description String
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "timestamp": "2025-09-02T04:34:14.093143",
+    "test_name": "login_flow",
+    "payload": "",
+    "outcome": "FAIL",
+    "notes": "Message: \n",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:34:35.047487",
+    "test_name": "register_login_flow",
+    "payload": "",
+    "outcome": "FAIL",
+    "notes": "Message: \n",
+    "url": "http://localhost:3000/register"
+  },
+  {
+    "timestamp": "2025-09-02T04:34:46.215043",
+    "test_name": "sqli_login",
+    "payload": "' OR '1'='1",
+    "outcome": "PASS",
+    "notes": "No redirect occurred",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:34:47.774992",
+    "test_name": "sqli_login",
+    "payload": "\" OR \"1\"=\"1\" --",
+    "outcome": "PASS",
+    "notes": "No redirect occurred",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:34:49.340366",
+    "test_name": "sqli_login",
+    "payload": "' OR 1=1 --",
+    "outcome": "FAIL",
+    "notes": "Vulnerability FOUND: login bypass",
+    "url": "http://localhost:3000/admin-login"
+  },
+  {
+    "timestamp": "2025-09-02T04:34:50.980926",
+    "test_name": "sqli_login",
+    "payload": "') OR ('1'='1",
+    "outcome": "PASS",
+    "notes": "No redirect occurred",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:34:52.546435",
+    "test_name": "sqli_login",
+    "payload": "admin' --",
+    "outcome": "PASS",
+    "notes": "No redirect occurred",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:34:54.089574",
+    "test_name": "sqli_login",
+    "payload": "admin' OR '1'='1",
+    "outcome": "PASS",
+    "notes": "No redirect occurred",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:34:55.627491",
+    "test_name": "sqli_login",
+    "payload": "' UNION SELECT NULL,NULL --",
+    "outcome": "PASS",
+    "notes": "No redirect occurred",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:34:57.211730",
+    "test_name": "sqli_login",
+    "payload": "; DROP TABLE users; --",
+    "outcome": "PASS",
+    "notes": "No redirect occurred",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:35:08.424508",
+    "test_name": "xss_login_error",
+    "payload": "<script>alert('XSS')</script>",
+    "outcome": "PASS",
+    "notes": "No alert present",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:35:09.838759",
+    "test_name": "xss_login_error",
+    "payload": "\"><img src=x onerror=alert(1)>",
+    "outcome": "FAIL",
+    "notes": "XSS Executed: 1",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:35:11.890094",
+    "test_name": "xss_login_error",
+    "payload": "<svg onload=alert(1)>",
+    "outcome": "PASS",
+    "notes": "No alert present",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:35:13.365604",
+    "test_name": "xss_login_error",
+    "payload": "<body onload=alert(1)>",
+    "outcome": "PASS",
+    "notes": "No alert present",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:35:14.771302",
+    "test_name": "xss_login_error",
+    "payload": "<a href=\"javascript:alert(1)\">x</a>",
+    "outcome": "PASS",
+    "notes": "No alert present",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:35:16.152157",
+    "test_name": "xss_login_error",
+    "payload": "<div onclick=alert(1)>click</div>",
+    "outcome": "PASS",
+    "notes": "No alert present",
+    "url": "http://localhost:3000/login"
+  }
+]

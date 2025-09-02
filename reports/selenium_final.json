@@ -1,0 +1,130 @@
+[
+  {
+    "timestamp": "2025-09-02T04:42:00.066733",
+    "test_name": "login_flow",
+    "payload": "",
+    "outcome": "FAIL",
+    "notes": "Message: \n",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:21.503689",
+    "test_name": "register_login_flow",
+    "payload": "",
+    "outcome": "FAIL",
+    "notes": "Message: \n",
+    "url": "http://localhost:3000/register"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:33.446829",
+    "test_name": "sqli_login",
+    "payload": "' OR '1'='1",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:35.291344",
+    "test_name": "sqli_login",
+    "payload": "\" OR \"1\"=\"1\" --",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:36.878568",
+    "test_name": "sqli_login",
+    "payload": "' OR 1=1 --",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:38.792971",
+    "test_name": "sqli_login",
+    "payload": "') OR ('1'='1",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:40.369567",
+    "test_name": "sqli_login",
+    "payload": "admin' --",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:42.139398",
+    "test_name": "sqli_login",
+    "payload": "admin' OR '1'='1",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:43.716085",
+    "test_name": "sqli_login",
+    "payload": "' UNION SELECT NULL,NULL --",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:45.306052",
+    "test_name": "sqli_login",
+    "payload": "; DROP TABLE users; --",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:57.274442",
+    "test_name": "xss_login_error",
+    "payload": "<script>alert('XSS')</script>",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:42:58.696895",
+    "test_name": "xss_login_error",
+    "payload": "\"><img src=x onerror=alert(1)>",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:43:00.116398",
+    "test_name": "xss_login_error",
+    "payload": "<svg onload=alert(1)>",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:43:01.514058",
+    "test_name": "xss_login_error",
+    "payload": "<body onload=alert(1)>",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:43:02.937626",
+    "test_name": "xss_login_error",
+    "payload": "<a href=\"javascript:alert(1)\">x</a>",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  },
+  {
+    "timestamp": "2025-09-02T04:43:04.338864",
+    "test_name": "xss_login_error",
+    "payload": "<div onclick=alert(1)>click</div>",
+    "outcome": "PASS",
+    "notes": "Blocked as expected",
+    "url": "http://localhost:3000/login"
+  }
+]
